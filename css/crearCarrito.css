@@ -1,0 +1,271 @@
+
+:root {
+    --color-primary: #fcd53f; /* Amarillo Poché */
+    --color-secondary: #3f70fc; /* Azul para acciones "Agregar/Pagar" */
+    --color-dark: #333;
+    --color-light: #fff9e6;
+    --color-white: white;
+    --font-stack: 'Courier New', monospace;
+}
+/* General */
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--color-light);
+    color: var(--color-dark); 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*index.html */
+body.inicio {
+    background-image: url('../assets/superFondo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Centrado vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95); /* Fondo casi blanco semi-transparente */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 400px; /* Tamaño fijo para la caja de inicio */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 25px;
+    color: var(--color-primary);
+}
+
+
+
+
+.botones a, 
+.btns {
+
+    display: inline-block; 
+    background: var(--color-white);
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 8px; 
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid var(--color-primary); 
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botones a:hover,
+.btns:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px); 
+}
+
+
+button:not(.btn-agregar):not(.btns) {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:not(.btn-agregar):not(.btns):hover {
+    background: #f4b93c; 
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    padding: 20px 0;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+
+.productos, .carrito {
+    width: 45%; 
+    background: var(--color-white);
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    color: var(--color-dark); 
+    min-height: 400px; 
+}
+.productos h2, .carrito h2 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+}
+
+
+#nombreUsuario {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px); 
+    margin: 15px 0 10px 0;
+    box-sizing: border-box; 
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0;
+    font-size: 1.05em;
+    border-bottom: 1px dashed #eee; 
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+
+.volver {
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 15px;
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block; 
+    transition: all 0.2s ease-in-out;
+}
+.volver:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+.btn-agregar, 
+.carrito ul li button {
+    background-color: var(--color-secondary); 
+    color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    padding: 6px 10px; 
+    border-radius: 4px; 
+    flex-shrink: 0; 
+    font-weight: normal;
+    transition: background-color 0.2s;
+}
+
+.btn-agregar:hover,
+.carrito ul li button:hover {
+    background-color: #2c59a3; 
+    border-color: #2c59a3;
+}
+
+
+
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+.carritoBox {
+    width: 300px; 
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    text-align: left; 
+    transition: transform 0.3s; 
+    
+
+    display: flex;            
+    flex-direction: column;   
+}
+
+.carritoBox:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carritoBox h3 {
+    color: var(--color-dark);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px dotted #ccc;
+    padding-bottom: 10px;
+}
+
+.carritoBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: var(--color-dark);
+    font-size: 0.95em;
+    
+    flex-grow: 1; 
+}
+
+
+.carritoBox p {
+    flex-shrink: 0; 
+}
+
+
+.carritoBox p:nth-of-type(1) { 
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--color-secondary); 
+    margin: 15px 0 8px 0;
+}
+
+
+.carritoBox p:nth-of-type(2) { 
+    text-align: center;
+    font-size: 1.1em;
+    margin: 10px 0 20px 0;
+}
+
+
+.btn-pagar { 
+    display: block; 
+    width: 100%;
+    background-color: var(--color-secondary); 
+    color: var(--color-white);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-top: auto; 
+}
+.btn-pagar:hover {
+    background-color: #2c59a3;
+}

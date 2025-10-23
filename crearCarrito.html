@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Carrito</title>
+    <link rel="stylesheet" href="css/crearCarrito.css">
+</head>
+
+<body>
+    <h1>Crear nuevo carrito</h1>
+    
+    <button class="volver">← Volver al inicio</button>
+    
+    <div class="container">
+        <div class="productos">
+            <h2>Productos (Stock)</h2>
+            <ul id="listaProductos"></ul>
+        </div>
+        
+        <div class="carrito">
+            <h2>Carrito actual</h2>
+            <ul id="listaCarrito"></ul>
+            <p>Total: $<span id="total">0</span></p>
+
+            <input type="text" id="nombreUsuario" placeholder="Nombre del comprador">
+            <button id="guardarCarrito">Guardar carrito</button>
+        </div>
+    </div>
+    
+    <script type="module" src="js/modules/Controller.js"></script>
+</body>
+</html>
